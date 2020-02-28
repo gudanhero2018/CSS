@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+*{
+	background-color: #996699;
+}
+main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+.cube{
+	width: 250px;
+	height: 250px;
+	transform-style: preserve-3d;
+	animation: r1 5s ease-in-out infinite;
+}
+.cube div{
+	width: 250px;
+	height: 250px;
+	background-size: cover;
+	background-position: center center;
+	opacity: 0.8;
+	position: absolute;
+}
+/*前*/
+.cube .img1{
+	background-image: url('1.jpg');
+	transform: translateZ(125px);
+}
+/*右*/
+.cube .img2{
+	background-image: url('2.jpg');
+	transform:rotateY(90deg) translateZ(125px);
+}
+/*左*/
+.cube .img3{
+	background-image: url('3.jpg');
+	transform:rotateY(-90deg) translateZ(125px);
+}
+/*下*/
+.cube .img4{
+	background-image: url('4.jpg');
+	transform:rotateX(90deg) translateZ(125px);
+}
+/*上*/
+.cube .img5{
+	background-image: url('5.jpg');
+	transform:rotateX(-90deg) translateZ(125px);
+}
+/*后*/
+.cube .img6{
+	background-image: url('6.jpg');
+	transform:rotateY(180deg) translateZ(125px);
+}
+
+@keyframes r1{
+	0%{
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	20%{
+		transform: rotateY(-90deg);
+	}
+	40%{
+		transform: rotateX(-90deg);
+	}
+	60%{
+		transform: rotateY(90deg);
+	}
+	80%{
+		transform: rotateX(90deg);
+	}
+	100%{
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+
+}
